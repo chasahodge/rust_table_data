@@ -1,0 +1,7 @@
+pub struct Client {
+    id: i32,
+    company: String,
+    contact: String,
+    phone: String,
+    email: String,
+}

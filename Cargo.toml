@@ -1,0 +1,8 @@
+[package]
+name = "rust_table_data"
+version = "0.1.0"
+authors = ["Charles Hodge <46727996+chasahodge@users.noreply.github.com>"]
+edition = "2018"
+
+[dependencies]
+chrono = {version = "0.4", features = ["serde"]}
