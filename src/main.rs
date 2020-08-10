@@ -20,7 +20,7 @@ fn main() {
     let client_budget = Budget {
         id: 1,
         category: "Services".to_string(), 
-        subcategory: "ZetaOne Concerige".to_string(),
+        subcategory: "IT Concerige".to_string(),
         start_date: "01/01/2020".to_string(),
         end_date: "12/31/2024".to_string(),
         frequency: "Monthly".to_string(),
