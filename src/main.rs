@@ -23,7 +23,7 @@ fn main() {
         subcategory: "IT Concerige".to_string(),
         start_date: "01/01/2020".to_string(),
         end_date: "12/31/2024".to_string(),
-        frequency: "Monthly".to_string(),
+        frequency: "Quarterly".to_string(),
         cost: 1000.00
     };
     
@@ -47,7 +47,7 @@ fn main() {
             "Quarterly" => {
                 row.push(TableCell::Label(client_budget.category));
                 row.push(TableCell::Label(client_budget.subcategory));
-                for _y in 1..5 {
+                for _y in 1..4 {
                     for m in 1..13 {
                         if m == 1 || m == 4 || m == 7 || m == 10 {
                             row.push(TableCell::Float(client_budget.cost))
@@ -86,11 +86,12 @@ fn main() {
         println!("End Date has expired!");
     }
 
-    for value in table_data.iter() {
-        println!("{:?}", value);
-        match value {
-            TableCell::Label(label) => println!("{}", label),
-            TableCell::Float(float) => println!("{}", float),
+    for value in table_data {
+        for cell in value {
+            match cell {
+                TableCell::Label(label) => println!("{}", label),
+                TableCell::Float(float) => println!("{}", float),
+            }
         }
     }
 }
